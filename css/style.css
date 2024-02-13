@@ -219,8 +219,8 @@ figure {
   background-position: center center;
   background-repeat: no-repeat;
   position: relative;
-  height: 200px;
-  width: 200px;
+  height: 250px;
+  width: 250px;
   margin: 0 auto;
   margin-bottom: 30px;
   -webkit-border-radius: 50%;
@@ -1376,7 +1376,7 @@ input[type="text"] {
   display: inline-block;
   /* font-weight: 700; */
   /* text-transform: uppercase; */
-  /* letter-spacing: 1px; */
+  letter-spacing: 1px;
   /* font-size: 16px; */
   border-bottom: 3px solid #ff9000;
   margin-bottom: 23px;
