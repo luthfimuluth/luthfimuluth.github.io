@@ -330,6 +330,7 @@ figure {
   color: #fff !important;
 }
 
+
 .info {
   margin: 0;
   padding: 0;
@@ -1200,6 +1201,30 @@ input[type="text"] {
 .btn-info.btn-outline:focus,
 .btn-info.btn-outline:active {
   background: #5bc0de;
+  color: #fff;
+}
+
+.btn-yellow {
+  background: #fff;
+  color: #ff9000;
+  border: 2px solid #fff;
+}
+.btn-yellow:hover,
+.btn-yellow:focus,
+.btn-yellow:active {
+  background: #ff9000 !important;
+  color: #fff;
+  border-color: #ff9000!important;
+}
+.btn-yellow.btn-outline {
+  background: transparent;
+  color: #ff9000;
+  border: 2px solid #ff9000;
+}
+.btn-yellow.btn-outline:hover,
+.btn-yellow.btn-outline:focus,
+.btn-yellow.btn-outline:active {
+  background: #ff9000;
   color: #fff;
 }
 
