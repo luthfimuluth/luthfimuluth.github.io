@@ -7,35 +7,7 @@
 	<title>Muhammad Luthfi A. &mdash; Portfolio</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Muhammad Luthfi Agustian Portofolio" />
-	<!-- <meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" /> -->
 	<meta name="author" content="luthfimuluth" />
-
-	<!-- 
-	//////////////////////////////////////////////////////
-
-	FREE HTML5 TEMPLATE 
-	DESIGNED & DEVELOPED by FreeHTML5.co
-		
-	Website: 		http://freehtml5.co/
-	Email: 			info@freehtml5.co
-	Twitter: 		http://twitter.com/fh5co
-	Facebook: 		https://www.facebook.com/fh5co
-
-	//////////////////////////////////////////////////////
-	 -->
-
-	<!-- Facebook and Twitter integration -->
-	<meta property="og:title" content="" />
-	<meta property="og:image" content="" />
-	<meta property="og:url" content="" />
-	<meta property="og:site_name" content="" />
-	<meta property="og:description" content="" />
-	<meta name="twitter:title" content="" />
-	<meta name="twitter:image" content="" />
-	<meta name="twitter:url" content="" />
-	<meta name="twitter:card" content="" />
-
-
 
 	<link rel="shortcut icon" href="images/logo.png" />
 
@@ -47,6 +19,9 @@
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
 		rel="stylesheet">
 
+	<!-- Bootstrap Icons (Modern & Trendy) -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
 	<!-- Animate.css -->
 	<link rel="stylesheet" href="css/animate.css">
 	<!-- Icomoon Icon Fonts-->
@@ -57,14 +32,153 @@
 	<!-- Theme style  -->
 	<link rel="stylesheet" href="css/style.css">
 
-
 	<!-- Modernizr JS -->
 	<script src="js/modernizr-2.6.2.min.js"></script>
-	<!-- FOR IE9 below -->
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
 
+	<style>
+		/* Penyesuaian Bootstrap Icons agar kompatibel sempurna dengan CSS tema bawaan */
+		.fh5co-social-icons li a i.bi {
+			font-family: bootstrap-icons !important;
+			font-size: 26px;
+			line-height: 1;
+			display: inline-block;
+		}
+
+		#fh5co-features .feature-left .icon i.bi {
+			font-family: bootstrap-icons !important;
+			font-size: 44px;
+			display: table-cell;
+			vertical-align: middle;
+			height: 100px;
+			color: #ff9000 !important;
+		}
+
+		.timeline > li > .timeline-badge i.bi {
+			font-family: bootstrap-icons !important;
+			display: table-cell;
+			vertical-align: middle;
+			height: 44px;
+			font-size: 20px;
+		}
+
+		.btn-yellow i.bi {
+			font-family: bootstrap-icons !important;
+			margin-right: 6px;
+			font-size: 15px;
+			vertical-align: -1px;
+		}
+
+		/* Custom style for highlight creative project card */
+		.creative-highlight-card {
+			background: #fff;
+			border-radius: 8px;
+			padding: 24px;
+			box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+			margin-bottom: 30px;
+			text-align: left;
+			height: 100%;
+		}
+		.creative-badge {
+			display: inline-block;
+			background: #ff9000;
+			color: #fff;
+			font-size: 11px;
+			font-weight: 700;
+			text-transform: uppercase;
+			padding: 4px 10px;
+			border-radius: 15px;
+			letter-spacing: 0.5px;
+			margin-bottom: 12px;
+		}
+		.creative-preview {
+			position: relative;
+			border-radius: 6px;
+			overflow: hidden;
+			background: #111;
+			margin-bottom: 16px;
+			display: block;
+			aspect-ratio: 16/9;
+		}
+		.creative-preview img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			display: block;
+			transition: transform 0.3s ease;
+		}
+		.creative-preview:hover img {
+			transform: scale(1.03);
+		}
+		.creative-play-btn {
+			position: absolute;
+			inset: 0;
+			background: rgba(0,0,0,0.35);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			transition: background 0.2s ease;
+		}
+		.creative-play-btn:hover {
+			background: rgba(0,0,0,0.5);
+		}
+		.play-icon-circle {
+			width: 52px;
+			height: 52px;
+			border-radius: 50%;
+			background: #e11d48;
+			color: #fff;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 22px;
+			padding-left: 3px;
+			box-shadow: 0 4px 15px rgba(225, 29, 72, 0.4);
+		}
+		.creative-highlight-card h3 {
+			font-size: 19px;
+			font-weight: 700;
+			margin-bottom: 4px;
+			color: #333;
+		}
+		.creative-highlight-card .role-subtitle {
+			font-size: 13px;
+			color: #888;
+			margin-bottom: 12px;
+		}
+		.creative-highlight-card p {
+			font-size: 14px;
+			line-height: 1.6;
+			color: #555;
+		}
+
+		/* Portfolio Filter Buttons */
+		.portfolio-filter-wrapper {
+			text-align: center;
+			margin-bottom: 40px;
+		}
+		.portfolio-filter-btn {
+			display: inline-block;
+			background: rgba(255, 255, 255, 0.1);
+			color: #fff;
+			border: 1px solid rgba(255, 255, 255, 0.25);
+			padding: 7px 18px;
+			margin: 4px 3px;
+			border-radius: 20px;
+			font-size: 13px;
+			font-weight: 500;
+			cursor: pointer;
+			transition: 0.3s;
+			outline: none;
+		}
+		.portfolio-filter-btn:hover, .portfolio-filter-btn.active {
+			background: #ff9000;
+			border-color: #ff9000;
+			color: #fff;
+		}
+	</style>
 </head>
 
 <body>
@@ -72,6 +186,7 @@
 	<div class="fh5co-loader"></div>
 
 	<div id="page">
+		<!-- HEADER SECTION (PERSIS TAMPILAN AWAL GAMBAR 2 DENGAN ICON MODERN & BUTTON ICON) -->
 		<header id="fh5co-header" class="fh5co-cover js-fullheight" role="banner"
 			style="background-image:url(images/cover_bg_3.jpg);" data-stellar-background-ratio="0.5">
 			<div class="overlay"></div>
@@ -82,21 +197,17 @@
 							<div class="display-tc js-fullheight animate-box" data-animate-effect="fadeIn">
 								<div class="profile-thumb" style="background: url(images/profile-picture.jpg);"></div>
 								<h1><span>Muhammad Luthfi A.</span></h1>
-								<h3><span>IT Supervisor & Designer</span></h3>
+								<h3><span>Creative Media Specialist | Video Editor & Graphic Designer</span></h3>
 								<p>
 								<ul class="fh5co-social-icons">
-									<li><a href="https://wa.me/6285156809813"><i class="icon-whatsapp"></i></a></li>
-									<li><a href="mailto:luthfiagustian2@gmail.com"><i class="icon-mail"></i></a></li>
-									<li><a href="https://www.linkedin.com/in/luthfimuluth"><i
-												class="icon-linkedin3"></i></a></li>
-									<li><a href="https://www.instagram.com/muluthprojectid/"><i
-												class="icon-instagram"></i></a></li>
-									<li><a href="https://dribbble.com/luthfimuluth"><i class="icon-dribbble2"></i></a>
-									</li>
+									<li><a href="https://wa.me/6285156809813" target="_blank" title="WhatsApp"><i class="bi bi-whatsapp"></i></a></li>
+									<li><a href="mailto:luthfiagustian2@gmail.com" title="Email"><i class="bi bi-envelope"></i></a></li>
+									<li><a href="https://www.linkedin.com/in/luthfimuluth" target="_blank" title="LinkedIn"><i class="bi bi-linkedin"></i></a></li>
+									<li><a href="https://www.instagram.com/luthfimuluth" target="_blank" title="Instagram"><i class="bi bi-instagram"></i></a></li>
+									<li><a href="https://dribbble.com/luthfimuluth" target="_blank" title="Dribbble"><i class="bi bi-dribbble"></i></a></li>
 								</ul>
 								</p>
-								<a href="https://drive.google.com/file/d/1rV-vJZS18Cac1IWq1lVMoRif71lRh1jl/view?usp=sharing"
-									class="btn btn-yellow" target="_blank">Download Portofolio</a>
+								<a href="CV Muhammad Luthfi - Kreatif.pdf" class="btn btn-yellow" target="_blank"><i class="bi bi-file-earmark-pdf-fill"></i> Download CV Kreatif (PDF)</a>
 							</div>
 						</div>
 					</div>
@@ -104,6 +215,7 @@
 			</div>
 		</header>
 
+		<!-- ABOUT SECTION -->
 		<div id="fh5co-about" class="animate-box">
 			<div class="container">
 				<div class="row">
@@ -114,37 +226,77 @@
 				<div class="row">
 					<div class="col-md-5">
 						<ul class="info">
-							<li><span class="first-block">Nama Lengkap:</span><span class="second-block">Muhammad Luthfi
-									Agustian</span></li>
-							<li><span class="first-block">No. Handphone:</span><span class="second-block">+62851 5680
-									9813</span>
-							</li>
-							<li><span class="first-block">Email:</span><span
-									class="second-block">luthfiagustian2@gmail.com</span></li>
-							<li><span class="first-block">Alamat:</span><span class="second-block">Bogor, Jawa Barat,
-									Indonesia</span></li>
+							<li><span class="first-block">Nama Lengkap:</span><span class="second-block">Muhammad Luthfi Agustian</span></li>
+							<li><span class="first-block">Peran Utama:</span><span class="second-block">Creative Media & Graphic Designer</span></li>
+							<li><span class="first-block">No. Handphone:</span><span class="second-block">+62 851-5680-9813</span></li>
+							<li><span class="first-block">Email:</span><span class="second-block">luthfiagustian2@gmail.com</span></li>
+							<li><span class="first-block">Alamat:</span><span class="second-block">Bogor, Jawa Barat, Indonesia</span></li>
+							<li><span class="first-block">Status:</span><span class="second-block" style="color: #10b981; font-weight: 600;"><i class="bi bi-check-circle-fill"></i> Open to Work</span></li>
 						</ul>
 					</div>
 					<div class="col-md-7">
 						<h2>Hai, Saya Luthfi!</h2>
-						<p>Berpengalaman kerja sebagai IT Supervisor dan Desainer yang terampil dalam mengelola sistem
-							ERP, manajemen produk, membuat desain grafis & desain ui/ux yang menarik, dan mengembangkan
-							website berbasis wordpress.
+						<p>Kreator Media Kreatif & Desainer Multimedia dengan pengalaman lebih dari 2 tahun dalam produksi konten visual, desain grafis, dan video editing. Memiliki latar belakang pendidikan <strong>Multimedia</strong> dan <strong>Sistem Informasi</strong> yang menggabungkan estetika visual, keahlian storytelling, serta pemanfaatan <strong>AI Prompting & AI Agent (ChatGPT, Codex, Gemini, Antigravity, Claude)</strong> untuk akselerasi ide dan efisiensi produksi konten.
+						</p>
+						<p>Berpengalaman memproduksi konten video pendek (Reels/TikTok/Shorts) dengan performa organik hingga <strong>160.000+ views</strong>, serta menangani produksi film pendek dari pra-produksi, operasional kamera, hingga post-production (video editing & audio mixing).
 						</p>
 						<ul class="fh5co-social-icons">
-							<li><a href="https://wa.me/6285156809813"><i class="icon-whatsapp"></i></a></li>
-							<li><a href="mailto:luthfiagustian2@gmail.com"><i class="icon-mail"></i></a></li>
-							<li><a href="https://www.linkedin.com/in/luthfimuluth"><i class="icon-linkedin3"></i></a>
-							</li>
-							<li><a href="https://www.instagram.com/luthfimuluth"><i class="icon-instagram"></i></a></li>
-							<li><a href="https://dribbble.com/luthfimuluth"><i class="icon-dribbble2"></i></a>
-							</li>
+							<li><a href="https://wa.me/6285156809813" target="_blank"><i class="bi bi-whatsapp"></i></a></li>
+							<li><a href="mailto:luthfiagustian2@gmail.com"><i class="bi bi-envelope"></i></a></li>
+							<li><a href="https://www.linkedin.com/in/luthfimuluth" target="_blank"><i class="bi bi-linkedin"></i></a></li>
+							<li><a href="https://www.instagram.com/luthfimuluth" target="_blank"><i class="bi bi-instagram"></i></a></li>
+							<li><a href="https://dribbble.com/luthfimuluth" target="_blank"><i class="bi bi-dribbble"></i></a></li>
 						</ul>
 					</div>
 				</div>
 			</div>
 		</div>
 
+		<!-- HIGHLIGHT PROYEK KREATIF TERPILIH -->
+		<div id="fh5co-featured" class="fh5co-bg-color animate-box" style="padding: 7em 0 4em 0;">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+						<h2>Highlight Proyek Kreatif</h2>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6 col-sm-6 animate-box">
+						<div class="creative-highlight-card">
+							<span class="creative-badge">Film Pendek Multimedia</span>
+							<h3>Film Pendek: "Little Things"</h3>
+							<div class="role-subtitle">Peran: Producer, Camera Operator, Video Editor & Audio Mixer</div>
+							<a href="https://www.youtube.com/watch?v=G2dkqWD7LVc" target="_blank" class="creative-preview">
+								<img src="images/little-things.jpg" alt="Little Things Film Pendek">
+								<div class="creative-play-btn">
+									<div class="play-icon-circle"><i class="bi bi-play-fill"></i></div>
+								</div>
+							</a>
+							<p>Proyek film multimedia SMK Taruna Terpadu 1. Bertanggung jawab atas koordinasi pra-produksi, operasional kamera dengan angle dinamis, serta pasca-produksi (video editing, color correction dasar, penataan audio mixing & musik) untuk membangun cerita yang berkesan.</p>
+							<a href="https://www.youtube.com/watch?v=G2dkqWD7LVc" target="_blank" class="btn btn-default btn-sm"><i class="bi bi-youtube" style="color:#ef4444;"></i> Tonton di YouTube</a>
+						</div>
+					</div>
+
+					<div class="col-md-6 col-sm-6 animate-box">
+						<div class="creative-highlight-card">
+							<span class="creative-badge" style="background: #dc2626;">YouTube Shorts & Viral Content</span>
+							<h3>Top 5 Terlucu (@Top5Terlucu)</h3>
+							<div class="role-subtitle">Peran: Content Creator, Video Editor & Channel Manager</div>
+							<a href="https://www.youtube.com/@Top5Terlucu" target="_blank" class="creative-preview">
+								<img src="images/top5-card.jpg" alt="Top 5 Terlucu YouTube Channel">
+								<div class="creative-play-btn">
+									<div class="play-icon-circle" style="background:#eab308; color:#111;"><i class="bi bi-youtube"></i></div>
+								</div>
+							</a>
+							<p>Channel YouTube Shorts hiburan dan komedi berfokus pada <em>high-retention rate</em>, hook visual 3 detik awal, dynamic subtitle, dan efek suara. Berhasil meraih performa organik hingga <strong>160.000+ views</strong> pada salah satu video Shorts.</p>
+							<a href="https://www.youtube.com/@Top5Terlucu" target="_blank" class="btn btn-default btn-sm"><i class="bi bi-box-arrow-up-right"></i> Buka Channel YouTube</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- RESUME SECTION -->
 		<div id="fh5co-resume" class="fh5co-bg-color">
 			<div class="container">
 				<div class="row animate-box">
@@ -155,13 +307,32 @@
 				<div class="row">
 					<div class="col-md-12 col-md-offset-0">
 						<ul class="timeline">
+							<!-- PENGALAMAN KERJA -->
 							<li class="timeline-heading text-center animate-box">
 								<div>
 									<h3>Pengalaman Kerja</h3>
 								</div>
 							</li>
+
 							<li class="animate-box timeline-unverted">
-								<div class="timeline-badge"><i class="icon-suitcase"></i></div>
+								<div class="timeline-badge"><i class="bi bi-palette-fill"></i></div>
+								<div class="timeline-panel">
+									<div class="timeline-heading">
+										<h3 class="timeline-title">Graphic Designer</h3>
+										<span class="company">PT. Satwa Bahagia Indonesia | 2019 - 2021</span>
+									</div>
+									<div class="timeline-body">
+										<p>• Membuat desain grafis untuk media cetak dan digital</p>
+										<p>• Mengembangkan konsep desain kreatif sesuai kebutuhan</p>
+										<p>• Kolaborasi dengan tim untuk solusi visual efektif</p>
+										<p>• Memastikan konsistensi desain sesuai identitas merek</p>
+										<p>• Berkomunikasi dengan klien dan mengelola waktu secara efisien</p>
+									</div>
+								</div>
+							</li>
+
+							<li class="timeline-inverted animate-box">
+								<div class="timeline-badge"><i class="bi bi-laptop-fill"></i></div>
 								<div class="timeline-panel">
 									<div class="timeline-heading">
 										<h3 class="timeline-title">IT Supervisor</h3>
@@ -179,25 +350,10 @@
 									</div>
 								</div>
 							</li>
-							<li class="timeline-inverted animate-box">
-								<div class="timeline-badge"><i class="icon-suitcase"></i></div>
-								<div class="timeline-panel">
-									<div class="timeline-heading">
-										<h3 class="timeline-title">Desain Grafis</h3>
-										<span class="company">PT. Satwa Bahagia Indonesia | 2019 - 2021</span>
-									</div>
-									<div class="timeline-body">
-										<p>• Membuat desain grafis untuk media cetak dan digital</p>
-										<p>• Mengembangkan konsep desain kreatif sesuai kebutuhan</p>
-										<p>• Kolaborasi dengan tim untuk solusi visual efektif</p>
-										<p>• Memastikan konsistensi desain sesuai identitas merek</p>
-										<p>• Berkomunikasi dengan klien dan mengelola waktu secara efisien</p>
-									</div>
-								</div>
-							</li>
 
 							<br>
 
+							<!-- PENDIDIKAN (TERBARU DULUAN: S1 -> D3 -> SMK) -->
 							<li class="timeline-heading text-center animate-box">
 								<div>
 									<h3>Pendidikan</h3>
@@ -205,7 +361,7 @@
 							</li>
 
 							<li class="animate-box timeline-unverted">
-								<div class="timeline-badge"><i class="icon-graduation-cap"></i></div>
+								<div class="timeline-badge"><i class="bi bi-mortarboard-fill"></i></div>
 								<div class="timeline-panel">
 									<div class="timeline-heading">
 										<h3 class="timeline-title">Sarjana - Sistem Informasi</h3>
@@ -213,13 +369,13 @@
 									</div>
 									<div class="timeline-body">
 										<p>• Mendapatkan IPK 3,65 / 4,00</p>
-										<p>• Skripsi tentang Penerapan Algoritma K-Means untuk Analisis Data Rekam Medis
-											Penyakit Kucing di Klinik Hewan Satwagia</p>
+										<p>• Skripsi tentang Penerapan Algoritma K-Means untuk Analisis Data Rekam Medis Penyakit Kucing di Klinik Hewan Satwagia</p>
 									</div>
 								</div>
 							</li>
+
 							<li class="timeline-inverted animate-box">
-								<div class="timeline-badge"><i class="icon-graduation-cap"></i></div>
+								<div class="timeline-badge"><i class="bi bi-mortarboard-fill"></i></div>
 								<div class="timeline-panel">
 									<div class="timeline-heading">
 										<h3 class="timeline-title">Diploma 3 - Sistem Informasi</h3>
@@ -227,35 +383,39 @@
 									</div>
 									<div class="timeline-body">
 										<p>• Mendapatkan IPK 3,56 / 4,00</p>
-										<p>• Tugas akhir membuat website tentang E-Commerce Penjualan Obat Hewan
-											berbasis Website menggunakan framework CodeIgniter</p>
+										<p>• Tugas akhir membuat website tentang E-Commerce Penjualan Obat Hewan berbasis Website menggunakan framework CodeIgniter</p>
 									</div>
 								</div>
 							</li>
+
 							<li class="animate-box timeline-unverted">
-								<div class="timeline-badge"><i class="icon-graduation-cap"></i></div>
+								<div class="timeline-badge"><i class="bi bi-camera-reels-fill"></i></div>
 								<div class="timeline-panel">
 									<div class="timeline-heading">
 										<h3 class="timeline-title">Sekolah Menengah Kejuruan</h3>
 										<span class="company">SMK Taruna Terpadu 1 | 2014 - 2017</span>
 									</div>
 									<div class="timeline-body">
-										<p>• Membuat proyek film pendek berjudul 'Little Things'</p>
+										<p>• Jurusan Multimedia (Videografi, Fotografi, Audio-Video Editing, & Desain Grafis)</p>
+										<p>• Mendapatkan Nilai ‘A’ Uji Kompetensi Keahlian Multimedia</p>
 										<p>• Uji Kompetensi membuat video tutorial menggunakan Corel Draw</p>
+										<p>• Membuat proyek film pendek berjudul 'Little Things'</p>
 									</div>
 								</div>
 							</li>
 
 							<br>
 
+							<!-- SERTIFIKASI (LENGKAP 4 SESUAI GAMBAR 3) -->
 							<li class="timeline-heading text-center animate-box">
 								<div>
 									<h3>Sertifikasi</h3>
 								</div>
 							</li>
 
+							<!-- Sertifikasi 1: UI UX -->
 							<li class="timeline-inverted animate-box">
-								<div class="timeline-badge"><i class="icon-file-text2"></i></div>
+								<div class="timeline-badge"><i class="bi bi-file-earmark-text-fill"></i></div>
 								<div class="timeline-panel">
 									<div class="timeline-heading">
 										<h3 class="timeline-title">Bootcamp: UI UX Designer</h3>
@@ -263,25 +423,29 @@
 									</div>
 									<div class="timeline-body">
 										<a href="https://drive.google.com/file/d/1ZWCgOL27FXAAm8PqI4n8iOxkRM6tTTtb/view?usp=sharing"
-											class="btn btn-default">Lihat Kredensial</a>
+											class="btn btn-default" target="_blank">Lihat Kredensial</a>
 									</div>
 								</div>
 							</li>
+
+							<!-- Sertifikasi 2: Product Management -->
 							<li class="animate-box timeline-unverted">
-								<div class="timeline-badge"><i class="icon-file-text2"></i></div>
+								<div class="timeline-badge"><i class="bi bi-file-earmark-text-fill"></i></div>
 								<div class="timeline-panel">
 									<div class="timeline-heading">
-										<h3 class="timeline-title">Intro to Product Management </h3>
+										<h3 class="timeline-title">Intro to Product Management</h3>
 										<span class="company">RevoU Mini Course | September 2023</span>
 									</div>
 									<div class="timeline-body">
 										<a href="https://click.mlflow.com/link/c/YT0yMjk2MzAxNTA5ODc4NDg3MzM2JmM9cTB1NSZlPTAmYj0xMDYzMDg3ODYzJmQ9cjhqMGE1Yw==.oCm_sMVDp5N40PuPGAoqNE6DZ61LV9wxcJASnTr-ziQ"
-											class="btn btn-default">Lihat Kredensial</a>
+											class="btn btn-default" target="_blank">Lihat Kredensial</a>
 									</div>
 								</div>
 							</li>
+
+							<!-- Sertifikasi 3: Dasar-dasar DevOps -->
 							<li class="timeline-inverted animate-box">
-								<div class="timeline-badge"><i class="icon-file-text2"></i></div>
+								<div class="timeline-badge"><i class="bi bi-file-earmark-text-fill"></i></div>
 								<div class="timeline-panel">
 									<div class="timeline-heading">
 										<h3 class="timeline-title">Dasar-dasar DevOps</h3>
@@ -289,21 +453,22 @@
 									</div>
 									<div class="timeline-body">
 										<a href="https://www.dicoding.com/certificates/RVZKK0VKOZD5"
-											class="btn btn-default">Lihat Kredensial</a>
+											class="btn btn-default" target="_blank">Lihat Kredensial</a>
 									</div>
 								</div>
 							</li>
+
+							<!-- Sertifikasi 4: Programmer BNSP -->
 							<li class="animate-box timeline-unverted">
-								<div class="timeline-badge"><i class="icon-file-text2"></i></div>
+								<div class="timeline-badge"><i class="bi bi-file-earmark-text-fill"></i></div>
 								<div class="timeline-panel">
 									<div class="timeline-heading">
 										<h3 class="timeline-title">Programmer</h3>
-										<span class="company">Badan Nasional Sertifikasi Profesi (BNSP) | February
-											2021</span>
+										<span class="company">Badan Nasional Sertifikasi Profesi (BNSP) | February 2021</span>
 									</div>
 									<div class="timeline-body">
 										<a href="https://drive.google.com/file/d/1Dk7HW9SBsu7khCvSI71f5oz9fKwmDf0H/view?usp=sharing"
-											class="btn btn-default">Lihat Kredensial</a>
+											class="btn btn-default" target="_blank">Lihat Kredensial</a>
 									</div>
 								</div>
 							</li>
@@ -313,8 +478,7 @@
 			</div>
 		</div>
 
-
-		<!--begin::MyService-->
+		<!-- LAYANAN SAYA (STRUKTUR GAMBAR 4 ASLI DENGAN ICON MODERN) -->
 		<div id="fh5co-features" class="animate-box">
 			<div class="container">
 				<div class="services-padding">
@@ -324,16 +488,14 @@
 						</div>
 					</div>
 					<div class="row">
-
 						<div class="col-md-4 text-center">
 							<div class="feature-left">
 								<span class="icon">
-									<i class="icon-paintbrush"></i>
+									<i class="bi bi-brush"></i>
 								</span>
 								<div class="feature-copy">
 									<h3>UI/UX Design</h3>
-									<p>High-fidelity design untuk mobile app & website, Interactive prototyping
-										menggunakan Figma</p>
+									<p>High-fidelity design untuk mobile app & website, Interactive prototyping menggunakan Figma</p>
 								</div>
 							</div>
 						</div>
@@ -341,12 +503,11 @@
 						<div class="col-md-4 text-center">
 							<div class="feature-left">
 								<span class="icon">
-									<i class="icon-tools"></i>
+									<i class="bi bi-pencil-square"></i>
 								</span>
 								<div class="feature-copy">
 									<h3>Graphic Design</h3>
-									<p>Jadikan desain Anda lebih menarik dan branding perusahaan Anda secara profesional
-									</p>
+									<p>Jadikan desain Anda lebih menarik dan branding perusahaan Anda secara profesional</p>
 								</div>
 							</div>
 						</div>
@@ -354,55 +515,49 @@
 						<div class="col-md-4 text-center">
 							<div class="feature-left">
 								<span class="icon">
-									<i class="icon-layers"></i>
+									<i class="bi bi-camera-reels"></i>
 								</span>
 								<div class="feature-copy">
-									<h3>Product Management</h3>
-									<p>Merancang, menganalisis, mengembangkan, mengelola, menguji dan mengevaluasi
-										aplikasi maupun website</p>
+									<h3>Video Editing</h3>
+									<p>Editing video pendek (Shorts, TikTok, Reels), hook visual, dynamic subtitle, audio mixing, dan storytelling</p>
 								</div>
 							</div>
 						</div>
 					</div>
 
-
 					<div class="row">
 						<div class="col-md-4 text-center">
-
 							<div class="feature-left">
 								<span class="icon">
-									<i class="icon-bargraph"></i>
+									<i class="bi bi-stack"></i>
 								</span>
 								<div class="feature-copy">
-									<h3>Wordpress Development</h3>
-									<p>Membangun landing page, website interaktif, website penjualan atau e-commerce
-										menggunakan Wordpress</p>
+									<h3>Product Management</h3>
+									<p>Merancang, menganalisis, mengembangkan, mengelola, menguji dan mengevaluasi aplikasi maupun website</p>
 								</div>
 							</div>
-
 						</div>
 
 						<div class="col-md-4 text-center">
 							<div class="feature-left">
 								<span class="icon">
-									<i class="icon-briefcase"></i>
+									<i class="bi bi-code-slash"></i>
 								</span>
 								<div class="feature-copy">
-									<h3>IT Administration</h3>
-									<p>Membantu segala kebutuhan administratif IT dalam perusahaan</p>
+									<h3>Web Development</h3>
+									<p>Membangun landing page modern, website interaktif, toko online / e-commerce, dan web portal responsif</p>
 								</div>
 							</div>
-
 						</div>
+
 						<div class="col-md-4 text-center">
 							<div class="feature-left">
 								<span class="icon">
-									<i class="icon-chat"></i>
+									<i class="bi bi-robot"></i>
 								</span>
 								<div class="feature-copy">
-									<h3>IT Support</h3>
-									<p>Memberikan dukungan dan pemecahan masalah perangkat keras, perangkat lunak, dan
-										sistem aplikasi</p>
+									<h3>AI Creative Workflow</h3>
+									<p>Pemanfaatan AI Prompting (ChatGPT, Gemini, Claude) untuk riset ide, penulisan script, dan visual generation</p>
 								</div>
 							</div>
 						</div>
@@ -410,9 +565,8 @@
 				</div>
 			</div>
 		</div>
-		<!--end::MyService-->
 
-
+		<!-- SKILLSET (STRUKTUR GAMBAR 4 ASLI DENGAN BADGE PILL) -->
 		<div id="fh5co-skills" class="animate-box" style="padding-bottom: 0;">
 			<div class="container">
 				<div class="ds-skills-section">
@@ -420,18 +574,17 @@
 						<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
 							<h2 class="ds-heading">Hard Skills</h2>
 							<ul class="ds-skills-list">
-								<li>Poduct Management</li>
+								<li>Video Editing (Shorts/Reels)</li>
+								<li>Camera Shooting</li>
+								<li>Audio Mixing</li>
 								<li>Graphic Design</li>
 								<li>UI UX Design</li>
 								<li>Wireframe & Prototype</li>
+								<li>Product Management</li>
+								<li>AI Prompting</li>
 								<li>ERP System</li>
 								<li>Support & Training</li>
-								<li>CRM</li>
-								<li>Agile</li>
-								<li>Scrum</li>
-								<li>Administration</li>
 								<li>Testing</li>
-								<li>Data Entry</li>
 							</ul>
 						</div>
 						<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
@@ -453,25 +606,18 @@
 						<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
 							<h2 class="ds-heading">Alat Kerja</h2>
 							<ul class="ds-skills-list">
+								<li>CapCut</li>
+								<li>Adobe Premiere Pro</li>
+								<li>Adobe After Effects</li>
+								<li>Canva</li>
+								<li>Adobe Photoshop</li>
+								<li>CorelDraw</li>
+								<li>Figma</li>
+								<li>ChatGPT / Claude / Gemini</li>
 								<li>Microsoft Office</li>
 								<li>ERP (eWebAcc)</li>
 								<li>ClickUp</li>
-								<li>VSCode</li>
-								<li>Putty</li>
-								<li>dBeaver</li>
-								<li>Postman</li>
-								<li>Maze</li>
-								<li>Drawio</li>
-								<li>Laragon</li>
-								<li>Github</li>
 								<li>Wordpress</li>
-								<li>Figma</li>
-								<li>CorelDraw</li>
-								<li>Photoshop</li>
-								<li>HTML</li>
-								<li>CSS</li>
-								<li>Laravel</li>
-								<li>MySQL</li>
 							</ul>
 						</div>
 						<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
@@ -486,6 +632,7 @@
 			</div>
 		</div>
 
+		<!-- PORTOFOLIO SECTION (STRUKTUR CSS ASLI DENGAN FILTERING) -->
 		<div id="fh5co-work" class="fh5co-bg-dark">
 			<div class="container">
 				<div class="row animate-box">
@@ -493,129 +640,41 @@
 						<h2>Portofolio</h2>
 					</div>
 				</div>
+
+				<!-- Filter Tabs -->
+				<div class="portfolio-filter-wrapper animate-box">
+					<button class="portfolio-filter-btn active" data-filter="all">Semua</button>
+					<button class="portfolio-filter-btn" data-filter="video">Video & Multimedia</button>
+					<button class="portfolio-filter-btn" data-filter="design">Desain Grafis</button>
+					<button class="portfolio-filter-btn" data-filter="uiux">UI/UX & Web</button>
+				</div>
+
 				<div class="row">
 
-					<div class="col-md-3 text-center col-padding animate-box">
-						<a href="https://animamedika.com/" class="work"
-							style="background-image: url(images/Anima\ Medika\ -\ Cover.png);" target="_blank">
+					<!-- VIDEO 1: Little Things -->
+					<div class="col-md-3 col-sm-6 text-center col-padding animate-box porto-box" data-cat="video">
+						<a href="https://www.youtube.com/watch?v=G2dkqWD7LVc" class="work"
+							style="background-image: url(images/little-things.jpg);" target="_blank">
 							<div class="desc">
-								<h3>PT. Anima Medika Sejahtera</h3>
-								<span>Wordpress Development</span>
+								<h3>Little Things</h3>
+								<span>Film Pendek (Editor & Camera)</span>
 							</div>
 						</a>
 					</div>
 
-					<div class="col-md-3 text-center col-padding animate-box">
-						<a href="https://dev-serenity-springs.pantheonsite.io/" class="work"
-							style="background-image: url(images/Serenity\ Springs\ -\ Cover.png);" target="_blank">
+					<!-- VIDEO 2: Top 5 Terlucu -->
+					<div class="col-md-3 col-sm-6 text-center col-padding animate-box porto-box" data-cat="video">
+						<a href="https://www.youtube.com/@Top5Terlucu" class="work"
+							style="background-image: url(images/top5-card.jpg);" target="_blank">
 							<div class="desc">
-								<h3>Serenity Springs</h3>
-								<span>Wordpress Development</span>
+								<h3>Top 5 Terlucu</h3>
+								<span>YouTube Shorts (160k+ Views)</span>
 							</div>
 						</a>
 					</div>
 
-					<div class="col-md-3 text-center col-padding animate-box">
-						<a href="https://dev-vivadecor.pantheonsite.io/" class="work"
-							style="background-image: url(images/vivadecor.png);" target="_blank">
-							<div class="desc">
-								<h3>Viva Decor</h3>
-								<span>Wordpress Development</span>
-							</div>
-						</a>
-					</div>
-
-					<div class="col-md-3 text-center col-padding animate-box">
-						<a href="https://dev-travluth.pantheonsite.io/" class="work"
-							style="background-image: url(images/travluth.png);" target="_blank">
-							<div class="desc">
-								<h3>Travluth</h3>
-								<span>Wordpress Development</span>
-							</div>
-						</a>
-					</div>
-
-					<div class="col-md-3 text-center col-padding animate-box">
-						<a href="https://drive.google.com/file/d/1nR1iZDsuRLdNZBUPiONRmnDegup0vGfK/view?usp=sharing"
-							class="work" style="background-image: url(images/sg-lite.png);" target="_blank">
-							<div class="desc">
-								<h3>Satwagia LITE</h3>
-								<span>Product Management</span>
-							</div>
-						</a>
-					</div>
-
-					<div class="col-md-3 text-center col-padding animate-box">
-						<a href="https://www.cakeresume.com/portfolios/portofolio-27de1b" class="work"
-							style="background-image: url(images/sg-app.png);" target="_blank">
-							<div class="desc">
-								<h3>Satwagia App</h3>
-								<span>Product Management</span>
-							</div>
-						</a>
-					</div>
-
-					<div class="col-md-3 text-center col-padding animate-box">
-						<a href="https://satwagiagroup.ewebacc.com/" class="work"
-							style="background-image: url(images/erp.png);" target="_blank">
-							<div class="desc">
-								<h3>ERP System</h3>
-								<span>IT Administration</span>
-							</div>
-						</a>
-					</div>
-
-					<div class="col-md-3 text-center col-padding animate-box">
-						<a href="https://dribbble.com/shots/23667591-Redesign-National-Hospital-App" class="work"
-							style="background-image: url(images/UI-1.png);" target="_blank">
-							<div class="desc">
-								<h4>National Hospital App</h4>
-								<span>UI UX Design</span>
-							</div>
-						</a>
-					</div>
-
-					<div class="col-md-3 text-center col-padding animate-box">
-						<a href="https://dribbble.com/shots/23667761-Redesign-Website-National-Hospital" class="work"
-							style="background-image: url(images/UI-3.png);" target="_blank">
-							<div class="desc">
-								<h3>National Hospital Web</h3>
-								<span>UI UX Design</span>
-							</div>
-						</a>
-					</div>
-
-					<div class="col-md-3 text-center col-padding animate-box">
-						<a href="https://dribbble.com/shots/22730889-Satwagia-Pet-Solution-Booking-Mobile-App"
-							class="work" style="background-image: url(images/UI-4.png);" target="_blank">
-							<div class="desc">
-								<h3>Satwagia App</h3>
-								<span>UI UX Design</span>
-							</div>
-						</a>
-					</div>
-
-					<div class="col-md-3 text-center col-padding animate-box">
-						<a href="https://dribbble.com/shots/22753706-Stack-Landing-Page" class="work"
-							style="background-image: url(images/UI-5.png);" target="_blank">
-							<div class="desc">
-								<h3>Stack Web</h3>
-								<span>UI UX Design</span>
-							</div>
-						</a>
-					</div>
-
-					<div class="col-md-3 text-center col-padding animate-box">
-						<a href="https://dribbble.com/shots/22804782-Online-Vet-Consultation-Mobile-App-Design"
-							class="work" style="background-image: url(images/UI-2.png);" target="_blank">
-							<div class="desc">
-								<h3>Hi-Vet App</h3>
-								<span>UI UX Design</span>
-							</div>
-						</a>
-					</div>
-
-					<div class="col-md-3 text-center col-padding animate-box">
+					<!-- DESAIN 1: Branding -->
+					<div class="col-md-3 col-sm-6 text-center col-padding animate-box porto-box" data-cat="design">
 						<a href="images/GD - 1.png" class="work" style="background-image: url(images/GD\ -\ 1.png);"
 							target="_blank">
 							<div class="desc">
@@ -625,7 +684,8 @@
 						</a>
 					</div>
 
-					<div class="col-md-3 text-center col-padding animate-box">
+					<!-- DESAIN 2: Banner -->
+					<div class="col-md-3 col-sm-6 text-center col-padding animate-box porto-box" data-cat="design">
 						<a href="images/GD - 2.png" class="work" style="background-image: url(images/GD\ -\ 2.png);"
 							target="_blank">
 							<div class="desc">
@@ -635,7 +695,8 @@
 						</a>
 					</div>
 
-					<div class="col-md-3 text-center col-padding animate-box">
+					<!-- DESAIN 3: Packaging -->
+					<div class="col-md-3 col-sm-6 text-center col-padding animate-box porto-box" data-cat="design">
 						<a href="images/GD - 3.png" class="work" style="background-image: url(images/GD\ -\ 3.png);"
 							target="_blank">
 							<div class="desc">
@@ -645,7 +706,8 @@
 						</a>
 					</div>
 
-					<div class="col-md-3 text-center col-padding animate-box">
+					<!-- DESAIN 4: Poster -->
+					<div class="col-md-3 col-sm-6 text-center col-padding animate-box porto-box" data-cat="design">
 						<a href="images/GD - 4.png" class="work" style="background-image: url(images/GD\ -\ 4.png);"
 							target="_blank">
 							<div class="desc">
@@ -655,21 +717,148 @@
 						</a>
 					</div>
 
-					<!-- <div class="col-md-3 text-center col-padding animate-box">
+					<!-- DESAIN 5: Mix Collaterals -->
+					<div class="col-md-3 col-sm-6 text-center col-padding animate-box porto-box" data-cat="design">
 						<a href="images/GD - 5.png" class="work" style="background-image: url(images/GD\ -\ 5.png);"
 							target="_blank">
 							<div class="desc">
-								<h3>Mix</h3>
+								<h3>Mix Collateral</h3>
 								<span>Graphic Design</span>
 							</div>
 						</a>
-					</div> -->
+					</div>
+
+					<!-- DESAIN 6: Dokumen Slide Portofolio Lengkap -->
+					<div class="col-md-3 col-sm-6 text-center col-padding animate-box porto-box" data-cat="design">
+						<a href="https://drive.google.com/file/d/1rV-vJZS18Cac1IWq1lVMoRif71lRh1jl/view?usp=sharing"
+							class="work" style="background-image: url(images/vivadecor.png);" target="_blank">
+							<div class="desc">
+								<h3>Slide Portofolio</h3>
+								<span>Lihat Portofolio Lengkap (Drive)</span>
+							</div>
+						</a>
+					</div>
+
+					<!-- UI/UX 1: National Hospital App -->
+					<div class="col-md-3 col-sm-6 text-center col-padding animate-box porto-box" data-cat="uiux">
+						<a href="https://dribbble.com/shots/23667591-Redesign-National-Hospital-App" class="work"
+							style="background-image: url(images/UI-1.png);" target="_blank">
+							<div class="desc">
+								<h4>National Hospital App</h4>
+								<span>UI UX Design</span>
+							</div>
+						</a>
+					</div>
+
+					<!-- UI/UX 2: National Hospital Web -->
+					<div class="col-md-3 col-sm-6 text-center col-padding animate-box porto-box" data-cat="uiux">
+						<a href="https://dribbble.com/shots/23667761-Redesign-Website-National-Hospital" class="work"
+							style="background-image: url(images/UI-3.png);" target="_blank">
+							<div class="desc">
+								<h3>National Hospital Web</h3>
+								<span>UI UX Design</span>
+							</div>
+						</a>
+					</div>
+
+					<!-- UI/UX 3: Satwagia App -->
+					<div class="col-md-3 col-sm-6 text-center col-padding animate-box porto-box" data-cat="uiux">
+						<a href="https://dribbble.com/shots/22730889-Satwagia-Pet-Solution-Booking-Mobile-App"
+							class="work" style="background-image: url(images/UI-4.png);" target="_blank">
+							<div class="desc">
+								<h3>Satwagia App</h3>
+								<span>UI UX Design</span>
+							</div>
+						</a>
+					</div>
+
+					<!-- UI/UX 4: Hi-Vet App -->
+					<div class="col-md-3 col-sm-6 text-center col-padding animate-box porto-box" data-cat="uiux">
+						<a href="https://dribbble.com/shots/22804782-Online-Vet-Consultation-Mobile-App-Design"
+							class="work" style="background-image: url(images/UI-2.png);" target="_blank">
+							<div class="desc">
+								<h3>Hi-Vet App</h3>
+								<span>UI UX Design</span>
+							</div>
+						</a>
+					</div>
+
+					<!-- WEB 1: PT Anima Medika -->
+					<div class="col-md-3 col-sm-6 text-center col-padding animate-box porto-box" data-cat="uiux">
+						<a href="https://animamedika.com/" class="work"
+							style="background-image: url(images/Anima\ Medika\ -\ Cover.png);" target="_blank">
+							<div class="desc">
+								<h3>PT. Anima Medika Sejahtera</h3>
+								<span>Wordpress Development</span>
+							</div>
+						</a>
+					</div>
+
+					<!-- WEB 2: Serenity Springs -->
+					<div class="col-md-3 col-sm-6 text-center col-padding animate-box porto-box" data-cat="uiux">
+						<a href="https://dev-serenity-springs.pantheonsite.io/" class="work"
+							style="background-image: url(images/Serenity\ Springs\ -\ Cover.png);" target="_blank">
+							<div class="desc">
+								<h3>Serenity Springs</h3>
+								<span>Wordpress Development</span>
+							</div>
+						</a>
+					</div>
+
+					<!-- WEB 3: Satwagia LITE -->
+					<div class="col-md-3 col-sm-6 text-center col-padding animate-box porto-box" data-cat="uiux">
+						<a href="https://drive.google.com/file/d/1nR1iZDsuRLdNZBUPiONRmnDegup0vGfK/view?usp=sharing"
+							class="work" style="background-image: url(images/sg-lite.png);" target="_blank">
+							<div class="desc">
+								<h3>Satwagia LITE</h3>
+								<span>Product Management</span>
+							</div>
+						</a>
+					</div>
+
+					<!-- WEB 4: ERP System -->
+					<div class="col-md-3 col-sm-6 text-center col-padding animate-box porto-box" data-cat="uiux">
+						<a href="https://satwagiagroup.ewebacc.com/" class="work"
+							style="background-image: url(images/erp.png);" target="_blank">
+							<div class="desc">
+								<h3>ERP System</h3>
+								<span>IT Administration</span>
+							</div>
+						</a>
+					</div>
 
 				</div>
 			</div>
 		</div>
 
+		<!-- SECTION KHUSUS: CTA PORTOFOLIO IT & SYSTEM ANALYST -->
+		<div id="fh5co-it-portfolio" class="fh5co-bg-color animate-box" style="padding: 5em 0;">
+			<div class="container">
+				<div class="row" style="display: flex; align-items: center; flex-wrap: wrap;">
+					<div class="col-md-6 col-sm-12 animate-box" style="margin-bottom: 25px;">
+						<a href="https://cv.luthfiweb.com" target="_blank" style="display: block; border-radius: 8px; overflow: hidden; box-shadow: 0 8px 25px rgba(0,0,0,0.12); border: 1px solid #e2e8f0;">
+							<img src="images/cv-it-cover.png" alt="Portofolio IT & System Analyst" style="width: 100%; height: auto; display: block; transition: transform 0.3s ease;">
+						</a>
+					</div>
+					<div class="col-md-6 col-sm-12 animate-box" style="margin-bottom: 25px;">
+						<div style="padding: 0 15px;">
+							<span class="creative-badge" style="background: #ff9000;">
+								IT & Software Engineering
+							</span>
+							<h3 style="font-size: 24px; font-weight: 700; color: #1e293b; margin-bottom: 12px;">Mencari Portofolio IT & Sistem Analis?</h3>
+							<p style="font-size: 15px; line-height: 1.7; color: #64748b; margin-bottom: 20px;">
+								Selain di bidang media kreatif dan multimedia, saya memiliki pengalaman lebih dari 5 tahun di bidang <strong>System Analyst, ERP Specialist, & Fullstack Web Development (Laravel, Next.js)</strong>. Anda dapat melihat dokumentasi studi kasus, arsitektur sistem, dan demo aplikasi secara lengkap.
+							</p>
+							<a href="https://cv.luthfiweb.com" target="_blank" class="btn btn-default" style="border-radius: 25px; padding: 10px 24px; font-weight: 600; background: #ff9000; color: #fff; border-color: #ff9000;">
+								<i class="bi bi-box-arrow-up-right"></i> Kunjungi Portofolio IT (cv.luthfiweb.com)
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 
+		<!-- CONTACT CTA -->
 		<div id="fh5co-started" class="fh5co-bg-dark">
 			<div class="overlay"></div>
 			<div class="container">
@@ -677,35 +866,34 @@
 					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
 						<h2>Mari berdiskusi untuk sebuah proyek</h2>
 						<p>Tertarik untuk berkolaborasi? Beritahu dan hubungi saya!</p>
-						<a href="mailto:luthfiagustian2@gmail.com" class="btn btn-primary btn-lg">Kirim Email</a>
-						<a href="https://wa.link/rcqkzr" class="btn btn-primary btn-lg">WhatsApp</a>
+						<p>
+							<a href="mailto:luthfiagustian2@gmail.com" class="btn btn-primary btn-lg"><i class="bi bi-envelope-fill"></i> Kirim Email</a>
+							<a href="https://wa.me/6285156809813?text=Halo%20Luthfi%2C%20saya%20melihat%20portofolio%20Anda%20dan%20tertarik%20untuk%20berkolaborasi." target="_blank" class="btn btn-primary btn-lg" style="margin-left: 10px;"><i class="bi bi-whatsapp"></i> WhatsApp</a>
+						</p>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 
+	<!-- FOOTER -->
 	<div id="fh5co-footer">
-		<div class=" container">
+		<div class="container">
 			<div class="row">
 				<div class="col-md-12 text-center">
 					<h3 style="font-weight: bold; color: rgb(81, 81, 81);">Muhammad Luthfi Agustian</h3>
 					<p>
 					<ul class="fh5co-social-icons">
-						<li><a href="https://wa.me/6285156809813"><i class="icon-whatsapp"></i></a></li>
-						<li><a href="mailto:luthfiagustian2@gmail.com"><i class="icon-mail"></i></a></li>
-						<li><a href="https://www.linkedin.com/in/luthfimuluth"><i class="icon-linkedin3"></i></a>
-						</li>
-						<li><a href="https://www.instagram.com/luthfimuluth"><i class="icon-instagram"></i></a></li>
-						<li><a href="https://dribbble.com/luthfimuluth"><i class="icon-dribbble2"></i></a>
-						</li>
+						<li><a href="https://wa.me/6285156809813" target="_blank"><i class="bi bi-whatsapp"></i></a></li>
+						<li><a href="mailto:luthfiagustian2@gmail.com"><i class="bi bi-envelope"></i></a></li>
+						<li><a href="https://www.linkedin.com/in/luthfimuluth" target="_blank"><i class="bi bi-linkedin"></i></a></li>
+						<li><a href="https://www.instagram.com/luthfimuluth" target="_blank"><i class="bi bi-instagram"></i></a></li>
+						<li><a href="https://dribbble.com/luthfimuluth" target="_blank"><i class="bi bi-dribbble"></i></a></li>
 					</ul>
 					</p>
 					<br>
-					<p style="font-size: small;">&copy; <b>luthfimuluth.</b> All Rights Reserved. <br>Designed by <a
-							href="http://freehtml5.co" target="_blank">FreeHTML5.co</a></p>
+					<p style="font-size: small;">&copy; <b>luthfimuluth.</b> All Rights Reserved.</p>
 				</div>
-
 			</div>
 		</div>
 	</div>
@@ -726,13 +914,28 @@
 	<script src="js/jquery.stellar.min.js"></script>
 	<!-- Easy PieChart -->
 	<script src="js/jquery.easypiechart.min.js"></script>
-	<!-- Google Map -->
-	<script
-		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCefOgb1ZWqYtj7raVSmN4PL2WkTrc-KyA&sensor=false"></script>
-	<script src="js/google_map.js"></script>
-
 	<!-- Main -->
 	<script src="js/main.js"></script>
+
+	<!-- Simple, Clean Portfolio Filtering -->
+	<script>
+		$(document).ready(function() {
+			$('.portfolio-filter-btn').on('click', function(e) {
+				e.preventDefault();
+				$('.portfolio-filter-btn').removeClass('active');
+				$(this).addClass('active');
+
+				var filter = $(this).attr('data-filter');
+
+				if (filter === 'all') {
+					$('.porto-box').show();
+				} else {
+					$('.porto-box').hide();
+					$('.porto-box[data-cat="' + filter + '"]').show();
+				}
+			});
+		});
+	</script>
 
 </body>
 
